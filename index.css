@@ -1,0 +1,135 @@
+:root {
+    --box-shadow: 1px 1px 1px 1px rgb(0, 0, 0);
+    --staff-background: rgb(255 255 255 / 60%);
+    --staff-member-background: rgb(0, 0, 0);
+    --staff-member-border: 5px outset rgb(0, 0, 0);
+    --staff-member-delete-background: rgb(255, 255, 255);
+    --staff-member-delete-background-hover: rgb(0, 0, 0);
+    --staff-member-delete-text: rgb(0, 0, 0);
+    --staff-member-delete-text-hover: rgb(255, 255, 255);
+    --staff-member-hover: rgb(0 0 0 / 70%);
+    --staff-member-text: rgb(255, 255, 255);
+    --submit-button-background: rgb(0 0 0 / 70%);
+    --submit-button-background-hover: rgb(0, 0, 0);
+    --submit-button-text: rgb(255, 255, 255);
+    --user-form-background: rgb(255 255 255 / 60%);
+    --user-input-background: rgb(255 228 196 / 80%);
+    --user-input-background-active: rgb(255, 228, 196);
+    --user-input-background-hover: rgb(255, 228, 196);
+    --user-input-border: 3px outset rgb(0, 0, 0);
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    font-size: 1.6rem;
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    display: flex;
+    flex-flow: row nowrap;
+    height: 100vh;
+    padding: 1%;
+    place-items: center;
+    width: 100%;
+}
+
+.staff {
+    background-color: var(--staff-background);
+    border-radius: 5px;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 5%;
+    margin: 1% auto;
+    padding: 2%;
+    width: 35%;
+}
+
+.staff-member {
+    background-color: var(--staff-member-background);
+    border: var(--staff-member-border);
+    border-radius: 10%;
+    box-shadow: var(--box-shadow);
+    color: var(--staff-member-text);
+    cursor: pointer;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10%;
+    height: 10vh;
+    padding: 1%;
+    width: 40%;
+}
+
+.staff-member:hover {
+    background-color: var(--staff-member-hover);
+}
+
+.delete {
+    align-self: flex-start;
+    background-color: var(--staff-member-delete-background);
+    border-radius: 5px;
+    color: var(--staff-member-delete-text);
+    cursor: pointer;
+    width: 15px;
+}
+
+.delete:hover {
+    background-color: var(--staff-member-delete-hover);
+    color: var(--staff-member-delete-text-hover);
+}
+
+.info {
+    place-self: center;
+}
+
+.user-form {
+    background-color: var(--user-form-background);
+    border-radius: 5px;
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 0 auto;
+    padding: 2%;
+    width: 35%;
+}
+
+.user-form input {
+    background-color: var(--user-input-background);
+    border: var(--user-input-border);
+    border-radius: 5px;
+    margin: 0 auto;
+    padding: 1%;
+    width: 40%;
+}
+
+.user-form input:active {
+    background-color: var(--user-input-background-active);
+}
+
+.user-form input:hover {
+    background-color: var(--user-input-background-hover);
+}
+
+#submit {
+    background-color: var(--submit-button-background);
+    border-radius: 10%;
+    color: var(--submit-button-text);
+    cursor: pointer;
+    margin: 1% auto;
+    width: 40%;
+}
+
+#submit:active {
+    transform: translateY(5px);
+}
+
+#submit:hover {
+    background-color: var(--submit-button-background-hover);
+}
